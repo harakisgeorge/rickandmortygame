@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Global Styles */
+:root {
+  --gh-pattern-1: #fff4f9;
+  --gh-pattern-2: #ffebf1;
+  --gh-pattern-3: #ffe3d7;
+  --gh-pattern-4: #ffe2b1;
+  --gh-pattern-5: #ffea8b;
+
+  --gh-green-0: #22ae73;
+  --gh-green-1: #b9f3cd;
+  --gh-green-2: #96ed85;
+  --gh-green-3: #73e79c;
+  --gh-green-4: #51e183;
+  --gh-green-5: #2edc6b;
+  --gh-green-6: #21c058;
+  --gh-green-7: #1b9d48;
+  --gh-green-8: #157a38;
+  --gh-green-9: #0f5728;
+  --gh-green-10: #062310;
+
+  --gh-blue-0: #e3f1f7;
+  --gh-blue-1: #e6ebff;
+  --gh-blue-2: #a2ddf6;
+  --gh-blue-3: #7dcff2;
+  --gh-blue-4: #58c1ee;
+  --gh-blue-5: #33b4eb;
+  --gh-blue-6: #16a3df;
+  --gh-blue-7: #1287ba;
+  --gh-blue-8: #0f6c95;
+  --gh-blue-9: #0a41fa;
+  --gh-blue-10: #101068;
+
+  --gh-grey-1: #cccccc;
+  --gh-grey-2: #adadad;
+  --gh-grey-3: #999999;
+  --gh-grey-4: #757575;
+  --gh-grey-5: #666666;
+
+  --gh-pink-1: #fff0f7;
+  --gh-pink-2: #efa9ca;
+  --gh-pink-3: #e986b4;
+  --gh-pink-4: #e3649f;
+  --gh-pink-5: #da3582;
+
+  --gh-red-1: #e22452;
+  --gh-red-2: #ce2727;
+  --gh-red-3: #bc2424;
+
+  --gh-yellow-1: #ffedc2;
+  --gh-yellow-2: #f6e4be;
+  --gh-yellow-3: #ffd470;
+  --gh-yellow-4: #ffc847;
+
+  --gh-orange-1: #ffbc1f;
+  --gh-orange-2: #f5ab00;
+  --gh-orange-3: #f9aa81;
+
+  --gh-brown-1: #a37200;
+  --gh-brown-2: #7a5600;
+  --gh-brown-3: #523900;
+  --gh-brown-4: #823d40;
+
+  --transition: all 0.3s linear;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  background-color: #ddffaa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23AE9' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/%3E%3C/svg%3E");
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.05rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.55rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.main-title {
+  color: #00b0c6;
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+
+.card-container {
+  width: 400px;
+  height: 450px;
+  gap: 20px;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid var(--gh-grey-4);
+  border-radius: 4px;
+  outline: 0;
+  padding: 8px 24px;
+  margin: 0 auto;
+}
+
+.card-symbol-container {
+  height: 40px;
+}
+.card-button {
+  top: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  font-weight: 500px;
+  padding: 8px;
+  border-radius: 1px;
+  background-color: var(--gh-blue-2);
+}
+
+.card-image {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.card-name {
+  font-size: 20px;
+}
+
+/* The animation code */
+@keyframes tick {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: var(--gh-green-0);
+  }
+}
+
+@keyframes tickAnimation {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: var(--gh-green-0);
+  }
+}
+
+@keyframes crossAnimation {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: var(--gh-red-1);
+  }
+}
+
+.card-symbols {
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 45px;
+  color: #fff;
+}
+
+/* The element to apply the animation to */
+.card-done-symbol-tick {
+  animation-name: tickAnimation;
+  animation-duration: 3s;
+}
+
+.card-done-symbol-cross {
+  animation-name: crossAnimation;
+  animation-duration: 3s;
+}
+
+.card-button {
+  color: #fff;
+  width: 100px;
+  font-size: 22px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.card-button-alive {
+  background-color: var(--gh-green-5);
+}
+
+.card-button-cancel {
+  background-color: var(--gh-red-1);
+}
+
+.card-button-alive:hover {
+  background-color: var(--gh-green-7);
+}
+.card-button-cancel:hover {
+  background-color: var(--gh-red-3);
+}
